@@ -1,0 +1,3 @@
+[submodule "themes/vitormargis-theme"]
+	path = themes/vitormargis-theme
+	url = git@github.com:vitormargis/vitormargis-theme.git
