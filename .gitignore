@@ -1,4 +1,4 @@
-/public
-/node_modules
-/themes/vitormargis-theme
+public
+node_modules
+themes/vitormargis-theme
 db.json
