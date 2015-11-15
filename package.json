@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.0.0"
+    "version": "3.1.1"
   },
   "dependencies": {
     "hexo": "^3.0.0",
@@ -13,7 +13,7 @@
     "hexo-generator-tag": "^0.1.0",
     "hexo-renderer-ejs": "^0.1.0",
     "hexo-renderer-jade": "^0.1.0",
-    "hexo-renderer-less": "hexojs/hexo-renderer-less",
+    "hexo-renderer-less": "^0.1.2",
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-stylus": "^0.2.0",
     "hexo-server": "^0.1.2"

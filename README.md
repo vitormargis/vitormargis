@@ -1,2 +1,2 @@
 # vitormargis
-My personal website/blog and playground :)
+My personal website/blog and playground
