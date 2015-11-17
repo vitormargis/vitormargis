@@ -1,0 +1,18 @@
+a.margis-logo(href='/')
+  h1
+    a(href=config.root)
+      - if (config.title)
+        = config.title
+  h2
+    a(href=config.root)
+      - if (config.subtitle)
+        = config.subtitle
+nav.page-main-navigation
+  ul
+    - for (var i in theme.menu)
+      li
+        a(href=theme.menu[i].replace(/ *\([^)]*\) */g, ""))
+          = i
+          span
+            - theme_description = theme.menu[i].match(/\([^)]+\)/)
+            = theme_description

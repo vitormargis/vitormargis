@@ -1,0 +1,33 @@
+menu:
+  Resume: /resume (info and portfolio)
+  Works: /works (Projects and works)
+  Contact: /contact (get in touch)
+
+widgets:
+- search
+- category
+- tag
+
+less:
+  paths:
+    - source/css
+
+excerpt_link: Read More
+
+twitter:
+  username:
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+google_analytics:
+rss:
