@@ -1,6 +1,44 @@
 title: Checkout Some Works
 ---
 
+## Sprinklr Social Mirror
+
+![](./blackfriday.jpg "Logo Title Text 1")
+
+Social Mirror is a portal with a series oh hotsites aimed to the general public to show interesting data from several recurring events in social medias, like new years, black friday, elections and so on.
+
+Link/URL: [https://socialmirror.sprinklr.com/en/blackfriday](https://socialmirror.sprinklr.com/en/blackfriday)
+Link/URL: [https://socialmirror.sprinklr.com/pt/blackfriday](https://socialmirror.sprinklr.com/pt/blackfriday)
+
+### In this project I work with/in:
+
+- UI/UX Developmente
+- Front-end (AngularJS)
+
+## Framenimate
+
+![](./famenimate.jpg "Logo Title Text 1")
+
+Framenimate is a small javascript plugin to create simple sequential frames animations. It was born from a personal necessity of creating a sequential animation out of a series of photos taken using the sequential shooting function from digital cameras.
+
+Link/URL: [http://framenimate.margis.com.br/](http://framenimate.margis.com.br/)
+Github: [https://github.com/vitormargis/framenimate](https://github.com/vitormargis/framenimate)
+
+## Crafts & Codes
+
+![](./craftscodes.jpg "Logo Title Text 1")
+
+Crafts & Codes is a software studio focused in delivering web solutions. Handcrafted codes, custom solutions.
+
+Link/URL (under development): [crafts.codes](crafts.codes)
+
+### In this project I work with/in:
+
+- UI/UX Developmente
+- Layout Conception
+- Iconography
+- Most of the Front-end
+
 ## GFFCC Decoder
 
 ![](./gfcc.jpg "Logo Title Text 1")
@@ -20,10 +58,12 @@ Link/URL: [http://decoder.thegfcc.org/](http://decoder.thegfcc.org/)
 
 ![](./tcw.jpg "Logo Title Text 1")
 
-Also made here at [Vizir Sfotware Studio](http://vizir.com.br), this project is under current development for Edenred Brazilian Division - Ticket Car. We were hired mainly to rebuild their's old system from the ground newer technology, in this case, Angular. The project is being run in phases. Currently we're in phase two.
+Also made here at [Vizir Sfotware Studio](http://vizir.com.br), this project is under current development for Edenred Brazilian Division - Ticket Car. We were hired mainly to rebuild their's old system from the ground with a newer technology, in this case, Angular.
 
-Link/URL: [Sales and Simulation](https://www.pedidosticketcar.com.br/sales/#/login)
+Link/URL: [Sales and Simulation](https://www.pedidosticketcar.com.br/front/#/sales/simulation)
 Link/URL: [Client Login](https://www.pedidosticketcar.com.br/client/#/login)
+Link/URL: [Screenshots](http://vizualize.margis.com.br/#/github/vitormargis/vizualize/presenter+layouts/)
+
 
 ### In this project I work with/in:
 
@@ -37,7 +77,6 @@ Link/URL: [Client Login](https://www.pedidosticketcar.com.br/client/#/login)
 
 Vizulize is a work in progress project of mine that you can sneak in Github. It is currently in it's early stages. The ideia is to use Git repositories, and other sources in the future, to generate presentation. We've been using it in out officce to present interfaces to out clients.
 
-Old Version: [http://vizualize.vzr.com.br/](http://vizualize.vzr.com.br/)
 New Version: [http://vizualize.margis.com.br/](http://vizualize.margis.com.br/#/github/vitormargis/vizualize/presenter+layouts/0)
 Github: [https://github.com/vitormargis/vizualize](https://github.com/vitormargis/vizualize)
 
