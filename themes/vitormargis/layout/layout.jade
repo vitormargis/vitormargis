@@ -1,0 +1,8 @@
+!= partial('_partial/head')
+  body
+    .page-top-stripe
+    != partial('_partial/header')
+    != body
+    footer.footer.inner(style = "display: none")
+      include _partial/footer
+    != partial('_partial/after_footer')

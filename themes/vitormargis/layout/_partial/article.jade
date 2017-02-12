@@ -1,0 +1,26 @@
+- if (index)
+  article.page-content.home
+    article(class=item.layout)
+      .post-content
+        header
+          - if (item.layout != 'page')
+            time(datetime=item.date.toDate().toISOString())
+          != partial('post/title')
+        .entry
+          - if (item.excerpt && index)
+            != item.excerpt
+          - else
+            != item.content
+- else
+  article.page-content
+    article(class=item.layout)
+      .post-content
+        header
+          - if (item.layout != 'page')
+            time(datetime=item.date.toDate().toISOString())
+          != partial('post/title')
+        .entry
+          - if (item.excerpt && index)
+            != item.excerpt
+          - else
+            != item.content
