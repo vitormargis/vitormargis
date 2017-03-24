@@ -10,6 +10,8 @@ I'm currently available for work. Or just for a chat. You can find me in any of 
 
 If you wish, you can send a message directly to me from here:
 
+![Contact](https://media.giphy.com/media/YFHrJQ7I7oTSw/giphy.gif "Contact")
+
 <div id="wufoo-z1t6zz961pec1ss"></div>
 <script type="text/javascript">var z1t6zz961pec1ss;(function(d, t) {
 var s = d.createElement(t), options = {
