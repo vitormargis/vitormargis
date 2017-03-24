@@ -3,7 +3,7 @@ title: A Little Bit of Info!
 
 Hi, my name is **Vitor Margis**. I‘m a graduate of Visual Design from Brazil, currently living in São Paulo. Despite being focused in Design my early years of studying , I’ve always been a web enthusiastic, specially regarding the technical bit, and for this reasons as my design course  went by, I’ve always enrolled in extracurricular activities more focused in development/programming and never looked back.
 
-## And time goes by and...
+## And time goes by...
 
 ![Time goes by](https://media2.giphy.com/media/xTiQywlOn0gKyz0l56/giphy.gif "Time goes by")
 ##### *https://giphy.com/danielasherer*
