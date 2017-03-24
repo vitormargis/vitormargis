@@ -1,6 +1,7 @@
 menu:
   Resume: /resume (bio and skills)
-  Works: /works (Projects and works)
+  Works: /works (client projects)
+  Playground: /playground (personal projetcs)
   Contact: /contact (get in touch)
 
 widgets:
