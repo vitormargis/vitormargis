@@ -1,4 +1,5 @@
-title: Checkout Some Works
+title: Checkout a small selection of recent works for clients & companies
+featured: https://cdn-images-1.medium.com/max/1920/1*vXjx4Y7EgQBwALkaeZJ0Cg.jpeg
 ---
 ## Sprinklr Business Index
 

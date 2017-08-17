@@ -1,14 +1,16 @@
-title: A Little Bit of Info!
+title: Hi, my name is Vitor Margis, I am front-end developer and UI designer
+featured: https://cdn-images-1.medium.com/max/1920/1*vXjx4Y7EgQBwALkaeZJ0Cg.jpeg
 ---
 
-Hi, my name is **Vitor Margis**. I‘m a graduate of Visual Design from Brazil, currently living in São Paulo. Despite being focused in Design my early years of studying , I’ve always been a web enthusiastic, specially regarding the technical bit, and for this reasons as my design course  went by, I’ve always enrolled in extracurricular activities more focused in development/programming and never looked back.
+Currently I live in São Paulo, Brazil. Despite having a degree in Visual Design, I’ve always been a web enthusiastic, specially regarding the technical bits, and for this reasons as my design course went by, I’ve always enrolled in extracurricular activities focusing development/programming. In a nutshell, you could say I'm a designer that can code, or a programmer that can design...or as I mentioned: front-end developer and UI designer.
 
-## And time goes by...
+<div style="filter: grayscale() brightness(2); transform: rotate(180deg);">
+![Time goes by](https://d33wubrfki0l68.cloudfront.net/d44bf70508a9bac20de05cfd77d44fa7b35a2092/72157/images/uploads/2017/01/jstips-header-blog.gif "Time goes by")
+</div>
+##### *https://www.igluonline.com/*
 
-![Time goes by](https://media2.giphy.com/media/xTiQywlOn0gKyz0l56/giphy.gif "Time goes by")
-##### *https://giphy.com/danielasherer*
+It has been about 10 years since I've started working with internet, in the first 5 years as a **Designer**, and more recently, in the last 5 years to be more precise, as a **Front-end Developer**. Most of my freelance jobs gets done thought a business I've built called **[Crafts & Codes](https://crafts.codes/)**. Besides freelancing I'me working for **[Vizir](https://vizir.com.br/)** outsourced to **[Sprinklr](https://sprinklr.codes/)**. With some really fun technologies like React and Node. I still play around with Photoshop from time to time, although now days I prefer this other new tool called **[Affinity Designer](https://affinity.serif.com/en-us/)**.
 
-Currently it's been about 10 years since I've been working with internet, in the first 4 years as a **Designer**, and for the last 6 years as a **Front-end Developer**. Most of my jobs gets done thought a business I've built called **[Crafts & Codes](https://crafts.codes/)**, with a friend. I still play around with Photoshop from time to time, although I do prefer this neat new tool called Affinity Designer, just to keep the hang of it. But my true passion has become Javascript, and is where most of my effort has gone.
 
 But enought chat, if you got here, the odds are you want to get in touch, for a job, for hiring or just to talk. So just **[click here](http://vitor.margis.com.br/contact/)** and I'll show you how. Thanks for the visiting!
 

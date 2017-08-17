@@ -8,4 +8,12 @@
   if($('.title').text() === 'A Little Bit of Info!') $('body').addClass('resume');
   if($('.title').text() === 'Checkout Some Works') $('body').addClass('works');
   if($('.title').text() === 'Get In Touch') $('body').addClass('contact');
+
+  $(window).on('scroll', function(){
+    if ($(window).scrollTop() > 15) {
+      $('body').addClass('scolled')
+    } else {
+      $('body').removeClass('scolled')
+    }
+  })
 })(jQuery);

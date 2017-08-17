@@ -15,5 +15,5 @@ slug: home
 </div> -->
 
 <div class="me">
-![](../resume/me.png "Logo Title Text 1")
+<!-- ![](../resume/me.png "Logo Title Text 1") -->
 </div>

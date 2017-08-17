@@ -1,6 +1,7 @@
-title: Get In Touch
+title: Feel free to get in touch or perhaps, just stalk me if you like
+featured: https://cdn-images-1.medium.com/max/1920/1*vXjx4Y7EgQBwALkaeZJ0Cg.jpeg
 ---
-I'm currently available for work. Or just for a chat. You can find me in any of these places:
+I'm currently available for work. You can find me in any of these places:
 
 <div class="social-media-contact">
   <a href="https://www.facebook.com/vitor.margis" target="blank">![](./facebook.svg "Logo Title Text 1")</a><a href="https://twitter.com/vitormargis" target="blank">![](./twitter.svg "Logo Title Text 1")</a><a href="https://github.com/vitormargis" target="blank">![](./git.svg "Logo Title Text 1")</a><a href="https://br.linkedin.com/in/vitormargis" target="blank">![](./linkedin.svg "Logo Title Text 1")</a>
