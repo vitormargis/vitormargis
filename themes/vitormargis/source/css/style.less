@@ -111,7 +111,35 @@ body {
   background-size: cover;
   font-family: 'Open Sans Condensed';
   font-weight: 300;
-  height: 96%;
+}
+
+.github-link {
+  position: fixed;
+  z-index: 99999999;
+  right: 20px;
+  top: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+.github-icon {
+  fill: #FFF;
+  transition: fill 1s ease, opacity 1s ease;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.scolled .github-icon {
+  fill: #000;
+}
+
+.sidebar {
+  position: fixed;
+  top: 90px;
+  z-index: 999;
 }
 
 a.margis-logo {
@@ -119,9 +147,8 @@ a.margis-logo {
   height: 280px;
   background: rgba(255, 255, 255, 1) url(../img/margis-logo.png) no-repeat 26px 25px;
   background-size: 108px;
-  position: fixed;
-  top: 65px;
-  z-index: 999;
+  position: absolute;
+  top: 0;
   border-radius: 0px 3px 0px 0px;
   border-right: 1px solid rgba(0, 0, 0, 0.075);;
   border-top: 1px solid rgba(0, 0, 0, 0.075);;
@@ -130,8 +157,8 @@ a.margis-logo {
 nav.page-main-navigation {
   margin: 0;
   padding: 0 0 10px 0;
-  position: fixed;
-  top: 345px;
+  position: absolute;
+  top: 280px;
   z-index: 102;
   width: 162px;
   background: rgba(255, 255, 255, 1);
@@ -197,11 +224,8 @@ nav.page-main-navigation ul li a.active {
 
 .page-content.loaded {
   display: block;
-  position: relative;
-  margin: 220px 0 0px -320px;
+  margin-top: 225px;
   padding: 20px 0px 0px;
-  left: 50%;
-  width: 800px;
   min-height: 500px;
   z-index: 100;
   min-height: 100%;
@@ -211,21 +235,11 @@ nav.page-main-navigation ul li a.active {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
-.page-content.home.loaded {
-  display: block;
+.centering {
   position: relative;
-  margin: 0px 0 0px -320px;
-  padding: 0px 0px 0px;
   left: 50%;
   width: 800px;
-  min-height: 500px;
-  z-index: 100;
-  min-height: 100%;
-  transition: all 0.5s ease;
-  overflow: visible;;
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0px 100px 150px rgba(0, 0, 0, 0);
-  height: 100%;
+  margin-left: -320px;
 }
 
 .page-content img{
@@ -252,22 +266,41 @@ div.page-top-stripe {
 }
 
 .scolled .page-header {
-  top: -400px;
+  // top: -400px !important;
 }
 
 .page-header {
-  transition: top 1s ease;
+  // transition: top 1s ease;
   padding: 0px;
   top: 0;
   width: 100%;
   position: fixed;
-  height: 338px;
+  height: 365px;
   overflow: hidden;
+  background: #000;
+  opacity: .9;
 }
 
 .page-header img {
-  opacity: 0.85;
-  filter: brightness(0.25);
+  opacity: 1;
+  filter: brightness(0.3);
+  width: 100%;
+  min-height: 100%;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 90s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
+
+@keyframes mymove {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
 }
 
 .page-content a{
@@ -283,24 +316,21 @@ div.page-top-stripe {
 }
 
 .page-header h1 {
-  font-size: 45px;
+  font-size: 46px;
   font-weight: 600;
-  margin-top: -10px;
   max-width: 700px;
   margin-bottom: 30px;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
-  line-height: 50px;
+  line-height: 52px;
   letter-spacing: -0.1rem;
   float: left;
   width: 100%;
   color: #FFF;
-  text-shadow: 1px 1px 1px rgba(0,0,0,.004);
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  text-shadow: 0px 1px 0px #777, 1px 1px 0px #777, 1px 0px 0px #777;
   position: absolute;
-  top: 25%;
+  top: 85px;
   left: 50%;
   margin-left: -265px;
 }
@@ -507,9 +537,14 @@ Print styles
 @media (min-width: 1800px) and (max-width: 2000px) {
   .page-content.loaded {
     position: relative;
-    margin: 220px 0 0px -450px;
+    margin-top: 225px;
+    left: 50%;
+  }
+  .centering {
+    position: relative;
     left: 50%;
     width: 900px;
+    margin-left: -450px;
   }
   .page-header h1 {
     margin-left: -395px;
@@ -522,10 +557,6 @@ Print styles
   }
 }
 @media (min-width: 0px) and (max-width: 1100px) {
-  .page-content.loaded {
-    position: relative;
-    left: 50%;
-  }
   #field{
     bottom: 100% !important;
   }

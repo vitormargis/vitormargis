@@ -1,31 +1,26 @@
-- var title = ''
-- if (page.category)
-  title = page.category
-- if (page.tag)
-  title = page.tag
-- if (page.archive)
-  - if (page.year) title = page.year + (page.month ? '/' + page.month : '')
-  - else title = __('archive_a')
+header.page-header
+  img(src="#")
+  h1.title
+    = 'Archives'
+article.page-content.centering
+  article
+    .post-content
+      .entry
+        - page.posts.each(function(item){
+            article(class=item.layout)
+              .post-content
+                header
+                  .icon
+                  time(datetime=item.date.toDate().toISOString())
+                    a(href=config.root+item.path)
+                      != item.date.format(config.date_format)
 
-- if (pagination == 2)
-  - site.posts.each(function(item){
-    - partial('article', {item: item, index: true})
-  - })
-
-- else
-  .archive
-    - page.posts.each(function(item){
-        article(class=item.layout)
-          .post-content
-            header
-              .icon
-              time(datetime=item.date.toDate().toISOString())
-                a(href=config.root+item.path)
-                  != item.date.format(config.date_format)
-
-                h1.title.link
-                  a(href=config.root+item.path target="_blank")
-                    = item.title
-                    - page.category
-    - })
-  != - partial('pagination')
+                    h3.title.link
+                      a(href=config.root+item.path target="_blank")
+                        = item.title
+        - })
+        != list_categories()
+        != list_archives()
+        != list_posts({amount:1})
+        != search_form(options)
+        != partial('pagination')

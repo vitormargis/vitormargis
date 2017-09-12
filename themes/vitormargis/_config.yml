@@ -1,18 +1,14 @@
 menu:
-  Resume: /resume (bio and skills)
   Works: /works (client projects)
   Playground: /playground (personal projetcs)
   Contact: /contact (get in touch)
+  # Articles: /articles (personal projetcs)
+  # Resume: /resume (bio and skills)
 
 widgets:
 - search
 - category
 - tag
-
-test:
-  search: OI
-  category:
-  tag:
 
 less:
   paths:

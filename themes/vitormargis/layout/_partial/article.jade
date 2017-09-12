@@ -1,29 +1,15 @@
-- if (index)
-  article.page-content.home
-    article(class=item.layout)
-      .post-content
-        header
-          - if (item.layout != 'page')
-            time(datetime=item.date.toDate().toISOString())
-          != partial('post/title')
-        .entry
-          - if (item.excerpt && index)
-            != item.excerpt
-          - else
-            != item.content
-- else
-  header.page-header
-    - if (item.featured)
-      img(src=item.featured)
-    - if (item.layout != 'page')
-      time(datetime=item.date.toDate().toISOString())
-    != partial('post/title')  
-  article.page-content
-    article(class=item.layout)
-      .post-content
-        .entry
-          - if (item.excerpt && index)
-            != item.excerpt
-          - else
-            != item.content
-            
+header.page-header(class=item.layout)
+  - if (item.featured)
+    img(src=item.featured)
+  - if (item.layout != 'page')
+    time(datetime=item.date.toDate().toISOString())
+  != partial('post/title')  
+article.page-content.centering(class=item.layout)
+  article(class=item.layout)
+    .post-content
+      .entry
+        - if (item.excerpt && index)
+          != item.excerpt
+        - else
+          != item.content
+          

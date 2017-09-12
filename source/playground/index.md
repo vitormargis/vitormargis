@@ -1,5 +1,5 @@
 title: I also like to do some personal projects on my free time
-featured: https://cdn-images-1.medium.com/max/1920/1*vXjx4Y7EgQBwALkaeZJ0Cg.jpeg
+featured: banner.jpg
 ---
 
 ## Framenimate
