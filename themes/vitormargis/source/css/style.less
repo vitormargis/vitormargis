@@ -122,6 +122,13 @@ body {
   height: 40px;
 }
 
+.toggle-menu-mobile {
+  color: #fff;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+}
+
 .github-icon {
   fill: #FFF;
   transition: fill 1s ease, opacity 1s ease;
@@ -561,32 +568,131 @@ Print styles
     bottom: 100% !important;
   }
 
+  nav.page-main-navigation {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 65px;
+    left: -9px;
+    padding: 80px 0px 0;
+    width: 105%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  a.margis-logo {
+    width: 40%;
+    height: 65px;
+    background: none;
+    position: fixed;
+    top: 82px;
+    left: 16px;
+    z-index: 999999999999;
+    border-radius: 0;
+    border-right: none;
+    border-top: none;
+    &:after {
+      content: 'Bio & Info';
+      color: #198ab1;
+      text-transform: lowercase;
+      position: absolute;
+      top: 27px;
+      width: 130px;
+      font-size: 12px;
+      font-style: italic;
+      left: 5px;
+      font-family: 'Open Sans';
+    }
+    &:before {
+      content: 'Home';
+      font-family: 'Open Sans Condensed';
+      display: block;
+      font-size: 20px;
+      border-left: 6px solid transparent;
+      background: none;
+      text-transform: uppercase;
+      position: relative;
+      color: #000;
+    }
+  }
+
   .sidebar {
+    width: 100%;
     display: none;
+    position: fixed;
+    z-index: 9999999;
+  }
+
+  .mobile-opened {
+    .sidebar {
+      display: block;
+    }
+  }
+
+  a.toggle-menu-mobile {
+    top: 8px;
+    height: 62px;
+    border-radius: 0;
+    width: 100%;
+    background: #ffffff url(../img/hamburger.svg) no-repeat 26px 25px;
+    background-size: 40px;
+    background-position: 20px 5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .github-link {
+    position: fixed;
+    z-index: 99999999;
+    right: 14px;
+    top: 13px;
+    width: 50px;
+    height: 50px;
+  }
+
+ .github-icon {
+    fill: #000;
   }
 
   .page-content.loaded {
     width: 90%;
     margin-left: 5%;
     left: 0;
+    padding-top: 0;
   }
 
   .page-header h1 {
-    width: 90%;
-    margin-left: 5%;
+    width: 87%;
+    margin-left: 9%;
     left: 0;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    top: 90px;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .page-content {
+    word-wrap: break-word;
+  }
+
+  .social-media-contact a {
+    width: 9% !important;
+  }
+
+  .social-media-contact {
+    float: left;
   }
 
   .page-content img {
-    width: 100%;
-    margin: 6px 0 10px;
+    width: auto;
+    max-width: 114%;
+    margin: 6px -7% 10px;
   }
 
   .page-header img {
     width: auto;
     height: 100%;
+  }
+
+  .page-content .entry {
+    padding: 0 7%;
   }
 }
 

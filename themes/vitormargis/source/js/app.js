@@ -11,6 +11,11 @@
   if(url.includes('playground')) $('nav.page-main-navigation ul li:nth-child(2) a').addClass('active');
   if(url.includes('contact')) $('nav.page-main-navigation ul li:nth-child(3) a').addClass('active');
 
+  $('.toggle-menu-mobile').on('click', function() {
+    $('body').toggleClass('mobile-opened');
+    return false;
+  })
+
 
   $(window).on('scroll', function(){
     if ($(window).scrollTop() > 275) {
