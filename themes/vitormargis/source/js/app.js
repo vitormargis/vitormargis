@@ -16,6 +16,10 @@
     return false;
   })
 
+  if ($('.title').height() < 60) {
+    $('body').addClass('one-line-title')
+  }
+
 
   $(window).on('scroll', function(){
     if ($(window).scrollTop() > 275) {
