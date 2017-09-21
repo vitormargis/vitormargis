@@ -20,6 +20,10 @@
     $('body').addClass('one-line-title')
   }
 
+  $.get('/search.json', function(data) {
+    console.log(data);
+  })
+
 
   $(window).on('scroll', function(){
     if ($(window).scrollTop() > 275) {

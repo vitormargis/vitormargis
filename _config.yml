@@ -65,6 +65,10 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: vitormargis
 
+search:
+  path: search.json
+  field: all
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
