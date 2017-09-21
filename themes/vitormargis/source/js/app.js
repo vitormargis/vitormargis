@@ -24,6 +24,13 @@
     console.log(data);
   })
 
+  if ($(window).scrollTop() > 275) {
+    $('body').addClass('scolled')
+  } else {
+    $('body').removeClass('scolled')
+  }
+  
+  $('.page-header').css({top: -$(window).scrollTop()*1.1})
 
   $(window).on('scroll', function(){
     if ($(window).scrollTop() > 275) {

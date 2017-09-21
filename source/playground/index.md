@@ -31,7 +31,5 @@ Github Web: [https://github.com/vitormargis/cptmetro-site](https://github.com/vi
 
 Regio is a small plugin I've been working on for selecting/creating areas in DOM elements. WIP.
 
-### In this project I work with/in:
-
 Link/URL: [http://regio.margis.com.br/](http://regio.margis.com.br/)
 Github: [https://github.com/vitormargis/regio](https://github.com/vitormargis/regio)
