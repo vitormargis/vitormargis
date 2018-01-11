@@ -145,8 +145,12 @@ body {
 
 .sidebar {
   position: fixed;
-  top: 90px;
+  top: 9px;
   z-index: 999;
+  height: 100%;
+  background: #fff;
+  width: 162px;
+  border-right: 1px solid rgba(0, 0, 0, 0.075);;
 }
 
 a.margis-logo {
@@ -156,9 +160,6 @@ a.margis-logo {
   background-size: 108px;
   position: absolute;
   top: 0;
-  border-radius: 0px 3px 0px 0px;
-  border-right: 1px solid rgba(0, 0, 0, 0.075);;
-  border-top: 1px solid rgba(0, 0, 0, 0.075);;
 }
 
 nav.page-main-navigation {
@@ -170,8 +171,6 @@ nav.page-main-navigation {
   width: 162px;
   background: rgba(255, 255, 255, 1);
   border-radius: 0px 0px 3px 0px;
-  border-right: 1px solid rgba(0, 0, 0, 0.075);;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.075);;
 }
 
 nav.page-main-navigation ul {
@@ -249,13 +248,13 @@ nav.page-main-navigation ul li a.active {
 .centering {
   position: relative;
   left: 50%;
-  width: 800px;
-  margin-left: -320px;
+  width: 1000px;
+  margin-left: -420px;
 }
 
 .page-content img{
-  width: 798px;
-  margin: 6px -54px 10px;
+  width: 100%;
+  margin: 0;
 }
 
 .works .page-content img{
@@ -329,7 +328,7 @@ div.page-top-stripe {
 .page-header h1 {
   font-size: 46px;
   font-weight: 600;
-  max-width: 700px;
+  max-width: 890px;
   margin-bottom: 30px;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
@@ -343,7 +342,7 @@ div.page-top-stripe {
   position: absolute;
   top: 85px;
   left: 50%;
-  margin-left: -265px;
+  margin-left: -375px;
 }
 
 .page-content h3 {
@@ -546,17 +545,7 @@ Print styles
   }
 }
 @media (min-width: 1800px) and (max-width: 2000px) {
-  .page-content.loaded {
-    position: relative;
-    margin-top: 225px;
-    left: 50%;
-  }
-  .centering {
-    position: relative;
-    left: 50%;
-    width: 900px;
-    margin-left: -450px;
-  }
+
   .page-header h1 {
     margin-left: -395px;
   }
@@ -664,7 +653,7 @@ Print styles
   }
 
   .page-header h1 {
-    width: 87%;
+    width: 85%;
     margin-left: 9%;
     left: 0;
     top: 90px;

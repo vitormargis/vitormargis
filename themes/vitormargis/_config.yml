@@ -1,8 +1,8 @@
 menu:
   Works: /works (client projects)
   Playground: /playground (personal projetcs)
+  Articles: /articles (personal projetcs)
   Contact: /contact (get in touch)
-  # Articles: /articles (personal projetcs)
   # Resume: /resume (bio and skills)
 
 widgets:
