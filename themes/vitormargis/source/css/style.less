@@ -107,10 +107,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #F9F9F9 url(../img/bg-site.png) fixed;
   background-size: cover;
   font-family: 'Open Sans Condensed';
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 .github-link {
@@ -230,26 +230,43 @@ nav.page-main-navigation ul li a.active {
 
 .page-content.loaded {
   display: block;
-  margin-top: 225px;
-  padding: 20px 0px 0px;
-  min-height: 500px;
+  position: absolute;
+  top: 230px;
+  padding: 20px 200px 0px;
   z-index: 100;
   min-height: 100%;
   transition: all 0.5s ease;
   overflow: hidden;
-  background: rgba(255, 255, 255, 1);
+  background: #f9f9f9;
+  background: #F9F9F9 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAH0lEQVQoU2NkIAIwEqGGYaAVvX79+r+oqCiKM+jsJgAM7AQK6IxVqQAAAABJRU5ErkJggg==);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
+.full.loaded {
+  top: 100%
+}
+
+.full.page-header {
+  height: 100%
+}
+
+.full.page-header h1 {
+  top: 40%
+}
+
+.full.page-header img {
+  animation: none;
+}
+
 .one-line-title .page-content.loaded {
-  margin-top: 174px;
+  top: 174px;
 }
 
 .centering {
   position: relative;
   left: 50%;
-  width: 1000px;
-  margin-left: -420px;
+  width: 960px;
+  margin-left: -600px;
 }
 
 .page-content img{
@@ -294,7 +311,9 @@ div.page-top-stripe {
 .page-header img {
   opacity: 1;
   filter: brightness(0.3);
-  width: 100%;
+  position: absolute;
+  width: 90%;
+  left: 10%;
   min-height: 100%;
   -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
   animation: mymove 90s infinite;
@@ -326,9 +345,9 @@ div.page-top-stripe {
 }
 
 .page-header h1 {
-  font-size: 46px;
+  font-size: 48px;
   font-weight: 600;
-  max-width: 890px;
+  max-width: 860px;
   margin-bottom: 30px;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
@@ -340,9 +359,9 @@ div.page-top-stripe {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   position: absolute;
-  top: 85px;
+  top: 65px;
   left: 50%;
-  margin-left: -375px;
+  margin-left: -350px;
 }
 
 .page-content h3 {
@@ -382,6 +401,12 @@ div.page-top-stripe {
   text-shadow: 1px 1px 1px rgba(0,0,0,.004);
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
+}
+
+.page-content h2:first-child {
+  border: none;
+  margin-top: -20px;
+  padding-top: 0;
 }
 
 .page-header h2 {
@@ -612,7 +637,6 @@ Print styles
     width: 100%;
     display: none;
     position: fixed;
-    z-index: 9999999;
   }
 
   .mobile-opened {
@@ -649,7 +673,12 @@ Print styles
     width: 90%;
     margin-left: 5%;
     left: 0;
-    padding-top: 0;
+    padding: 0;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .page-header h1 {
@@ -657,7 +686,7 @@ Print styles
     margin-left: 9%;
     left: 0;
     top: 90px;
-    font-size: 2rem;
+    font-size: 1.8em;
     line-height: 2.2rem;
   }
 
