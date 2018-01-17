@@ -1,5 +1,6 @@
 title: Feel free to get in touch or perhaps, just stalk me if you like
 featured: https://cdn-images-1.medium.com/max/1920/1*vXjx4Y7EgQBwALkaeZJ0Cg.jpeg
+layout: full
 ---
 I'm currently available for work. You can find me in any of these places:
 
