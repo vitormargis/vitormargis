@@ -1,4 +1,4 @@
-title: Um Blog, Estudos e Hexo
+title: Um Blog
 category: estudo
 date: 2018-11-20
 

@@ -232,9 +232,9 @@ nav.page-main-navigation ul li a.active {
   display: block;
   position: absolute;
   top: 230px;
-  padding: 20px 200px 0px;
+  padding: 30px 450px 0px;
   z-index: 100;
-  min-height: 100%;
+  min-height: 80%;
   transition: all 0.5s ease;
   overflow: hidden;
   background: #f9f9f9;
@@ -243,7 +243,7 @@ nav.page-main-navigation ul li a.active {
 }
 
 .full.loaded {
-  top: 100%
+  top: 100% !important;
 }
 
 .full.page-header {
@@ -265,8 +265,8 @@ nav.page-main-navigation ul li a.active {
 .centering {
   position: relative;
   left: 50%;
-  width: 960px;
-  margin-left: -600px;
+  width: 850px;
+  margin-left: -800px;
 }
 
 .page-content img{
@@ -304,7 +304,7 @@ div.page-top-stripe {
   position: fixed;
   height: 365px;
   overflow: hidden;
-  background: #000;
+  background: #111;
   opacity: .9;
 }
 
@@ -333,11 +333,19 @@ div.page-top-stripe {
 }
 
 .page-content a{
-  color: #c0c0c0;
+  color: #12a6d4;
+  font-weight: 300;
+  padding: 0px 3px 1px;
+  margin: 0 -3px;
+  transition: all 0.3s ease;
 }
 
-.page-content a:hover{
-  color: #23a7d2;
+.page-content:not(.contact) a:hover{
+  color: #ffffff;
+  background: #12a6d4 !important;
+  padding: 0px 3px 1px;
+  margin: 0 -3px;
+  border-radius: 2px;
 }
 
 .page-header h1 a{
@@ -347,7 +355,7 @@ div.page-top-stripe {
 .page-header h1 {
   font-size: 48px;
   font-weight: 600;
-  max-width: 860px;
+  max-width: 770px;
   margin-bottom: 30px;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
@@ -361,7 +369,7 @@ div.page-top-stripe {
   position: absolute;
   top: 65px;
   left: 50%;
-  margin-left: -350px;
+  margin-left: -300px;
 }
 
 .page-content h3 {
@@ -377,7 +385,6 @@ div.page-top-stripe {
   float: left;
   width: 100%;
   color: #888;
-  border-top: 1px dashed #c0c0c0;
   padding-top: 0px;
   text-shadow: 1px 1px 1px rgba(0,0,0,.004);
   text-rendering: optimizeLegibility !important;
@@ -386,7 +393,7 @@ div.page-top-stripe {
 
 .page-content h2 {
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 600;
   margin-top: 0;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
@@ -395,8 +402,7 @@ div.page-top-stripe {
   margin: 15px 0px 15px;
   float: left;
   width: 100%;
-  color: #888;
-  border-top: 1px dashed #aaa;
+  color: #555;
   padding-top: 15px;
   text-shadow: 1px 1px 1px rgba(0,0,0,.004);
   text-rendering: optimizeLegibility !important;
@@ -405,7 +411,7 @@ div.page-top-stripe {
 
 .page-content h2:first-child {
   border: none;
-  margin-top: -20px;
+  margin-top: -10px;
   padding-top: 0;
 }
 
@@ -415,14 +421,58 @@ div.page-top-stripe {
   font-family: 'Open Sans';
   margin: 10px 0px;
   font-style: italic;
-  display: none;
+  play: none;
 }
 
 .page-content .entry p {
-  font-size: 17px;
+  font-size: 18px;
   font-family: 'Open Sans';
-  line-height: 30px;
-  color: #777;
+  line-height: 32px;
+  color: #555;
+  font-weight: 300;
+}
+
+.archives {
+  display: none;
+}
+
+.archives h2 {
+  border: none;
+  font-weight: 800;
+  margin: 10px 0 -10px !important;
+}
+
+.archives .post {
+  position: relative;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+}
+
+.archives time {
+  float: left;
+  position: absolute;
+  top: 16px;
+  right: 0;
+  opacity: .7;
+}
+
+.archives h3 {
+  float: left;
+  display: block;
+  width: 85%;
+  padding-right: 20%;
+  opacity: 1;
+  font-weight: 600;
+  padding: 10px 0;
+  line-height: 35px;
+  margin: 0;
+  font-size: 26px;
+  border-top: none;
+}
+
+.archives h3 a {
+  float: left;
 }
 
 footer {
@@ -570,13 +620,6 @@ Print styles
   }
 }
 @media (min-width: 1800px) and (max-width: 2000px) {
-
-  .page-header h1 {
-    margin-left: -395px;
-  }
-  .page-content img{
-    width: 898px;
-  }
   #field{
     bottom: 65% !important;
   }
@@ -813,4 +856,12 @@ div#wufoo-z1t6zz961pec1ss iframe{
   margin: 0;
   position: relative;
   width: 100%;
+}
+
+.home #disqus_thread {
+  display: none;
+}
+
+#disqus_thread {
+  margin: 50px 0;
 }

@@ -1,6 +1,6 @@
-title: Um Blog, Estudos e Hexo
-category: estudo
-date: 2018-11-20
+title: Outro
+category: articles
+date: 2017-11-20
 
 ---
 

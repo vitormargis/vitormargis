@@ -1,5 +1,6 @@
 title: Um Blog, Estudos e Hexo
 category: estudo
+date: 2017-11-20
 
 ---
 

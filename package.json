@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "hexo serve",
+    "start": "hexo serve -p 5000",
     "build": "hexo generate"
   },
   "hexo": {
-    "version": "3.3.9"
+    "version": "3.5.0"
   },
   "dependencies": {
-    "hexo": "^3.3.9",
-    "hexo-generator-archive": "^0.1.0",
+    "hexo": "^3.5.0",
+    "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.0",
     "hexo-generator-index": "^0.1.0",
     "hexo-generator-search": "^2.1.1",
