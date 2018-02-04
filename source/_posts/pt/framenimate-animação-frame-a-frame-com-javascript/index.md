@@ -1,7 +1,8 @@
-title: Netlify, code, commit, push e pow!
+title: Framenimate, animação frame a frame com javascript
 category: Open Source
 tags: Open Source, javascript
-date: 2018-01-05
+date: 2017-06-20
+lang: pt
 ---
 
 

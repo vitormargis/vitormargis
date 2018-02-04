@@ -1,7 +1,8 @@
-title: Framenimate, animação frame a frame com javascript
+title: Framenimate, frame animation with javascript
 category: Open Source
 tags: Open Source, javascript
 date: 2017-06-20
+lang: en
 ---
 
 
