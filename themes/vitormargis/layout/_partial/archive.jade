@@ -1,26 +1,61 @@
 header.page-header
-  img(src="#")
+  img(src="../home/banner.jpg")
   h1.title
-    = 'Some archives'
+    = 'Articles, ideas, life and stuff'
 article.page-content.centering
+  .lang-switch
+    a(href="#pt") PT
+    a(href="#en") EN
   article
-    .post-content
+    .archives.en
       .entry
+        h2
+          = 2018
         - page.posts.each(function(item){
+          - if (date(item.date.toDate(), 'YY') == 18 && item.lang == 'en')
             article(class=item.layout)
-              .post-content
-                header
-                  .icon
-                  time(datetime=item.date.toDate().toISOString())
-                    a(href=config.root+item.path)
-                      != item.date.format(config.date_format)
+              time(datetime=item.date.toDate().toISOString())                    
+                != item.date.format(config.date_format)
 
-                    h3.title.link
-                      a(href=config.root+item.path target="_blank")
-                        = item.title
+              h3.title.link
+                a(href=config.root+item.path)
+                  = item.title
         - })
-        != list_categories()
-        != list_archives()
-        != list_posts({amount:1})
-        != search_form(options)
-        != partial('pagination')
+        h2
+          = 2017
+        - page.posts.each(function(item){
+          - if (date(item.date.toDate(), 'YY') == 17 && item.lang == 'en')
+            article(class=item.layout)
+              time(datetime=item.date.toDate().toISOString())                    
+                != item.date.format(config.date_format)
+
+              h3.title.link
+                a(href=config.root+item.path)
+                  = item.title
+        - })
+    .archives.pt
+      .entry
+        h2
+          = 2018
+        - page.posts.each(function(item){
+          - if (date(item.date.toDate(), 'YY') == 18 && item.lang == 'pt')
+            article(class=item.layout)
+              time(datetime=item.date.toDate().toISOString())                    
+                != item.date.format(config.date_format)
+
+              h3.title.link
+                a(href=config.root+item.path)
+                  = item.title
+        - })
+        h2
+          = 2017
+        - page.posts.each(function(item){
+          - if (date(item.date.toDate(), 'YY') == 17 && item.lang == 'pt')
+            article(class=item.layout)
+              time(datetime=item.date.toDate().toISOString())                    
+                != item.date.format(config.date_format)
+
+              h3.title.link
+                a(href=config.root+item.path)
+                  = item.title
+        - })

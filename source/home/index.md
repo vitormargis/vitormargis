@@ -1,7 +1,7 @@
 title: Hi, my name is Vitor Margis, I am front-end developer and UI designer.
 featured: home/banner.jpg
 slug: home
-layout: go
+layout: home
 ---
 
 I was born in Rio de Janeiro, but lived and graduated in Visual Design in Porto Alegre, and currently live in São Paulo. Despite having a degree in Visual Design, I’ve always been a web enthusiastic, specially the technical bits, and as my design course went by, I’ve always enrolled in extracurricular activities more development/programming related. In a nutshell, you could say I'm a designer that can code, or a programmer that can design... or just... front-end developer and UI designer is fine.
