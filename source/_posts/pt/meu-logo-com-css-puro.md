@@ -1,8 +1,8 @@
-title: My logo with pure CSS
+title: Meu logo com CSS puro
 category: Open Source
 tags: Open Source, javascript
-date: 2018-01-05
-lang: en
+date: 2018-01-23
+lang: pt
 ---
 
 De tempos em tempo vejo alguns desafios relacionados a "desenhar" utilizando somente CSS. A verdade é que a maioria das vezes não são casos práticos ou com aplicação real no nosso dia a dia. Mas olhando para meu logo, me pareceu algo interessante e simples o suficiente para tentar fazer.
@@ -208,7 +208,7 @@ De tempos em tempo vejo alguns desafios relacionados a "desenhar" utilizando som
 
 ## Resultado final
 
-Os valores poderiam ser feitos com porcentagem, é só uma questão de converter. É uma ideia que a principio parece meio boba, mas pude entender melhor como funciona o "skew" por exemplo. Além disso, decidi adicionar algumas animações simples por diversão. Podia servir de loader: Quem sabe?
+Os valores poderiam ser feitos com porcentagem, é só uma questão de converter. É uma ideia que a princípio parece meio boba, mas pude entender melhor como funciona o "skew" por exemplo. Além disso, decidi adicionar algumas animações simples por diversão. Podia servir de loader: Quem sabe?
 
 </br>
 

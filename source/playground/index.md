@@ -1,5 +1,6 @@
 title: I also like to do some personal projects on my free time
 featured: banner.jpg
+layout: default
 ---
 
 ## Framenimate

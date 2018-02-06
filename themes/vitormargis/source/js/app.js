@@ -43,12 +43,22 @@
   })
 
   function setLang(lang) {
+    localStorage.setItem('vitorLang', lang);
+    $(`.archives`).hide();
     $(`.archives.${lang}`).show();
+    $(`.lang-switch`).removeClass('pt');
+    $(`.lang-switch`).removeClass('en');
+    $(`.lang-switch`).addClass(lang);
   }
 
   if($('.archives').length) {
-    setLang('en')
-
+    setLang(localStorage.vitorLang || 'pt')
   }
+
+  $('.lang-switch a').on('click', function(event) {
+    event.preventDefault()
+    const lang = $(this).attr('href').substring(1);
+    setLang(lang)
+  })
 
 })(jQuery);

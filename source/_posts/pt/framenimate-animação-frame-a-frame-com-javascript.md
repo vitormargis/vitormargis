@@ -5,12 +5,11 @@ date: 2017-06-20
 lang: pt
 ---
 
-
-<strong><i>Framenimate</i></strong> is a small javascript plugin to create simple sequential frames animations. It was born from a personal necessity of creating a sequential animation out of a series of photos taken using the sequential shooting function from digital cameras. Enjoy!
+**Framenimate** é uma pequena biblioteca em javascript que cria animações sequenciais de *frames*. Ela surgiu de uma necessidade pessoal que tive de criar animações sequenciais a partir de uma série de fotos tiradas utilizando a função de fotos sequenciais com a câmera.
 
 ## Basic Usage
 
-To start a new frame animation is as simples as adding the <strong><i>framenimate</i></strong> attribute to the wrapper tag where your images/frames are contained:</p>
+Para iniciar uma nova animação de frames basta adicionar o atributo **framenimate** ao *wrapper* que contém  sua images/frames
 
 <pre class="language-html"><code>
   &lt;figure framenimate &gt;
@@ -24,7 +23,7 @@ To start a new frame animation is as simples as adding the <strong><i>framenimat
 
 ## Options
 
-To change the animation properties it's possible to add some custom rules to the <strong><i>framenimate</i></strong> attribute:
+Para trocar as propriedades da animação é possível adicionar algumas regras como atributo para sua instancia do **framenimate**:
 
 <pre class="language-html"><code>
   &lt;figure framenimate="speed:25;" &gt;
@@ -36,7 +35,9 @@ To change the animation properties it's possible to add some custom rules to the
   &lt;/figure&gt;
 </code></pre>
 
-It is also possible to select the wrappers DOM node and create a new instance of animation for this target(s) through Javascript with <strong><i>new Framenimate</i></strong> and set some options:
+
+É possível também selecionar o *wrapper* e criar uma nova instancia
+de animação e adicionar opções:
 
 <pre class="language-js"><code>
   var animation = new Framenimate(element, {
@@ -48,7 +49,7 @@ It is also possible to select the wrappers DOM node and create a new instance of
 
 ## Methods
 
-<strong><i>Framenimate</i></strong> has also some methods for animation manipulation:
+*Framenimate* também possui alguns métodos para manipular a animação
 
 <pre class="language-js"><code>
   buttonReverse.addEventListener('click', function(){

@@ -14,8 +14,11 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://vitor.margis.com.br
 root: /
-permalink: :title/:lang/
+permalink: :title/
 permalink_defaults:
+
+exclude_generator:
+- index
 
 # Directory
 source_dir: source
