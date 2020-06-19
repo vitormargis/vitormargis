@@ -8,7 +8,7 @@ layout: default
 
 Social media rankings of the Sprinklr Business Index provides social data on how brands are performing online. The Sprinklr Business Index provides business rankings on the social leaders of today.
 
-Link/URL: [https://businessindex.sprinklr.com/](https://businessindex.sprinklr.com/)
+Link/URL (OFF): [https://businessindex.sprinklr.com/](https://businessindex.sprinklr.com/)
 
 ### In this project I work with/in:
 
@@ -21,8 +21,8 @@ Link/URL: [https://businessindex.sprinklr.com/](https://businessindex.sprinklr.c
 
 Social Mirror is a portal with a series oh hotsites aimed to the general public to show interesting data from several recurring events in social medias, like new years, black friday, elections and so on.
 
-Link/URL: [https://socialmirror.sprinklr.com/en/blackfriday](https://socialmirror.sprinklr.com/en/blackfriday)
-Link/URL: [https://socialmirror.sprinklr.com/pt/blackfriday](https://socialmirror.sprinklr.com/pt/blackfriday)
+Link/URL (OFF): [https://socialmirror.sprinklr.com/en/blackfriday](https://socialmirror.sprinklr.com/en/blackfriday)
+Link/URL (OFF): [https://socialmirror.sprinklr.com/pt/blackfriday](https://socialmirror.sprinklr.com/pt/blackfriday)
 
 ### In this project I work with/in:
 

@@ -3,6 +3,8 @@ category: Open Source
 tags: Open Source, javascript
 date: 2017-05-01
 lang: pt
+layout: full
+featured: banner.jpg
 ---
 
 Já comecei a fazer meu site pessoal inúmeras vezes, sempre começava mas não terminava. Nas primeiras tentativas optei por fazer utilizando Wordpress. Eu era um menino inocente e tinha aquele sonho de fazer um blog e ser relevante. Depois de algumas tentativas fracassadas, desisti do wordpress e escrevi um monte de arquivos HTML, CSS e uns JS com Jquery. Coloquei no ar alguns trabalhos e pronto: era recém formado e precisava de um emprego.

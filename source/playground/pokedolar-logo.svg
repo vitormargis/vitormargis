@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 300 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.364,0,0,1.364,-129.215,-15.792)">
+        <g transform="matrix(1.08084,0,0,1.08084,-3.70736,5.43048)">
+            <g transform="matrix(0.634295,0,0,0.634295,80.364,34.3453)">
+                <circle cx="111.432" cy="6.7" r="43.969" style="fill:rgb(164,0,0);"/>
+            </g>
+            <g transform="matrix(0.543799,0,0,-0.54627,89.6719,39.7935)">
+                <path d="M110.297,-9.634C134.564,-9.634 155.401,0.147 155.401,6.7C155.401,30.967 135.865,47.986 111.598,47.986C87.331,47.986 67.463,30.967 67.463,6.7C67.463,0.232 86.03,-9.634 110.297,-9.634Z" style="fill:rgb(183,0,0);"/>
+            </g>
+            <g transform="matrix(0.543799,0,0,0.54627,89.6719,35.7347)">
+                <path d="M112.344,10.758C136.611,10.758 155.401,0.147 155.401,6.7C155.401,30.967 135.699,50.669 111.432,50.669C87.165,50.669 67.463,30.967 67.463,6.7C67.463,0.232 88.077,10.758 112.344,10.758Z" style="fill:rgb(237,237,237);"/>
+            </g>
+            <g transform="matrix(0.86659,0,0,0.86659,25.7085,-1.4086)">
+                <circle cx="144.05" cy="48.954" r="9.406" style="fill:rgb(241,241,241);stroke:rgb(164,0,0);stroke-width:1.57px;"/>
+            </g>
+            <g transform="matrix(0.437328,0,0,0.437328,87.5434,19.6055)">
+                <circle cx="144.05" cy="48.954" r="9.406" style="fill:rgb(241,241,241);stroke:rgb(220,220,220);stroke-width:0.85px;"/>
+            </g>
+        </g>
+        <g transform="matrix(2.4857,0,0,2.4857,183.877,-75.9761)">
+            <text x="4.234px" y="48.88px" style="font-family:'Superclarendon-Black', 'Superclarendon', serif;font-weight:900;font-size:12px;fill:rgb(86,86,86);">P<tspan x="13.234px 20.626px 30.814px " y="48.88px 48.88px 48.88px ">oke</tspan></text>
+            <text x="4.234px" y="59.339px" style="font-family:'Superclarendon-Black', 'Superclarendon', serif;font-weight:900;font-size:12px;fill:rgb(86,86,86);">D<tspan x="13.99px 21.382px 26.518px 35.026px " y="59.339px 59.339px 59.339px 59.339px ">olar</tspan></text>
+        </g>
+        <g transform="matrix(1.25242,0,0,1.25242,273.69,-27.3816)">
+            <text x="4.234px" y="48.88px" style="font-family:'Superclarendon-LightItalic', 'Superclarendon', serif;font-weight:300;font-style:italic;font-size:14.049px;fill:rgb(146,146,146);">$</text>
+        </g>
+    </g>
+</svg>

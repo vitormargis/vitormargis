@@ -27,8 +27,11 @@
   } else {
     $('body').removeClass('scolled')
   }
-
-  $('.page-header').css({top: -$(window).scrollTop()*1.1})
+  console.log(-$(window).scrollTop()*1.1);
+  
+  $('.page-header').css('transform', 'translateY(' + (-$(window).scrollTop()*1.1) + 'px)')
+  // $('.page-header h1').css('opacity', (-$(window).scrollTop()*0.0075)+1)
+  // $('.page-header.full h1').css('opacity', (-$(window).scrollTop()*0.0025)+1)
 
   $(window).on('scroll', function(){
     if ($(window).scrollTop() > 185) {
@@ -39,7 +42,9 @@
     if ($(window).scrollTop() > 1000) {
       return
     }
-    $('.page-header').css({top: -$(window).scrollTop()*0.5})
+    $('.page-header').css('transform', 'translateY(' + (-$(window).scrollTop()*0.5) + 'px)')
+    // $('.page-header h1').css('opacity', (-$(window).scrollTop()*0.0075)+1)
+    // $('.page-header.full h1').css('opacity', (-$(window).scrollTop()*0.0025)+1)
   })
 
   function setLang(lang) {
