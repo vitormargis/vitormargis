@@ -58,3 +58,30 @@ Link/URL: [http://decoder.thegfcc.org/](http://decoder.thegfcc.org/)
 - Layout Conception
 - Iconography
 - Most of the Front-end
+
+## Vizir Software Studio
+
+![](./vizir.jpg "case image")
+
+Link/URL: [http://vizir.com.br/](http://vizir.com.br/)
+
+Website development for institutional page of the company I work for 6 years in Brazil. 
+
+### In this project I work with/in:
+
+- UX Developmente
+- Part of Layout Conception
+- Front-end
+
+## Flytour
+
+![](./flytour.jpg "case image")
+
+This project consisted of ramping up an old Java platform by improving the overall user experience. It was particularly challenging since it was a legacy application, and all work had to be done on top of the existing platform.
+
+### In this project I work with/in:
+
+- UI/UX Developmente
+- Layout Conception
+- Iconography
+- Front-end
