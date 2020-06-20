@@ -16,18 +16,17 @@
     $('body').addClass('one-line-title')
   }
 
-  $.get('/search.json', function(data) {
-    console.log(data);
-  })
-
-  console.log(url);
+  // $.get('/search.json', function(data) {
+  //   console.log(data);
+  // })
+  // console.log(url);
 
   if ($(window).scrollTop() > 185) {
     $('body').addClass('scolled')
   } else {
     $('body').removeClass('scolled')
   }
-  console.log(-$(window).scrollTop()*1.1);
+  // console.log(-$(window).scrollTop()*1.1);
   
   $('.page-header').css('transform', 'translateY(' + (-$(window).scrollTop()*1.1) + 'px)')
   // $('.page-header h1').css('opacity', (-$(window).scrollTop()*0.0075)+1)
