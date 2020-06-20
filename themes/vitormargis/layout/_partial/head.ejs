@@ -38,10 +38,13 @@
   <% } %>
 
   <link href="<%- config.root %>favicon.png" rel="icon">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:400,300,600,700,700italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:300,600,700' rel='stylesheet' type='text/css'>
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
+<% if(page.title) { %>
   <link rel="stylesheet" href="<%- config.root %>css/prism.css" media="screen" type="text/css">
   <script src="<%- config.root %>js/prism.js"></script>
+  <% } else { %>
+  <% } %>
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
