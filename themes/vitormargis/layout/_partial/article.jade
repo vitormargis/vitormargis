@@ -18,7 +18,7 @@ article.page-content.centering(class=item.layout)
           != item.excerpt
         - else
           != item.content
-          
+        - if(page.title)
           #disqus_thread
             script(type='text/javascript').
               /* * * CONFIGURATION VARIABLES * * */
@@ -33,4 +33,5 @@ article.page-content.centering(class=item.layout)
               | Please enable JavaScript to view the 
               a(href='https://disqus.com/?ref_noscript', rel='nofollow') comments powered by Disqus.
 
+            
           
