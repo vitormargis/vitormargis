@@ -1,4 +1,5 @@
 title: Checkout a small selection of recent works for clients & companies
+description: Checkout a small selection of recent works for clients & companies
 featured: banner.jpg
 layout: default
 ---

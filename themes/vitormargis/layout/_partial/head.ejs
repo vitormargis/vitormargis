@@ -29,10 +29,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
+  <% if (!page.title){ %><meta property="og:title" content="<%= config.title %>"/><% } %>
   <meta property="og:site_name" content="<%= config.title %>"/>
 
-  <% if(page.cover) { %>
-    <meta property="og:image" content="<%= page.cover %>" />
+  <% if(page.featured) { %>
+    <meta property="og:image" content="<%= page.featured %>" />
   <% } else { %>
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
