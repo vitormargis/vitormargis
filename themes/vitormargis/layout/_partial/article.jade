@@ -6,7 +6,7 @@
 - else
   header.page-header(class=item.layout)
     - if (item.featured)
-      img(src=item.featured)
+      img(src=item.featured alt=item.slug + ' banner')
     - if (item.layout != 'page')
       time(datetime=item.date.toDate().toISOString())
     != partial('post/title')  
