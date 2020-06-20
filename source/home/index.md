@@ -1,5 +1,5 @@
 title: Hi, my name is Vitor Margis, I am front-end developer and UI designer.
-featured: home/banner.jpg
+featured: home/banner.webp
 slug: home
 layout: home
 ---
