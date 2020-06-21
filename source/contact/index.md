@@ -4,7 +4,7 @@ layout: contact
 ---
 
 <div class="social-media-contact">
-  <a href="https://www.facebook.com/vitor.margis" target="blank">![](./facebook.svg "Logo Title Text 1")</a><a href="https://twitter.com/vitormargis" target="blank">![](./twitter.svg "Logo Title Text 1")</a><a href="https://github.com/vitormargis" target="blank">![](./git.svg "Logo Title Text 1")</a><a href="https://br.linkedin.com/in/vitormargis" target="blank">![](./linkedin.svg "Logo Title Text 1")</a>
+  <a href="https://www.facebook.com/vitor.margis" target="blank">![](./facebook.svg "Facebook logo")</a><a href="https://twitter.com/vitormargis" target="blank">![](./twitter.svg "Twitter logo)</a><a href="https://github.com/vitormargis" target="blank">![](./git.svg "Github logo")</a><a href="https://br.linkedin.com/in/vitormargis" target="blank">![](./linkedin.svg "Linkedin logo")</a>
 </div>
 
 I'm currently available for work. You can find me in any of the places above. Or, if you prefer, send me an email on <a href="mailto:vitor@margis.com.br">vitor@margis.com.br</a> or leave a comment saying something nice.
