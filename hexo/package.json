@@ -3,20 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "hexo serve -p 5000",
+    "start": "hexo serve -p 3000",
     "build": "hexo generate"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "7.2.0"
   },
   "dependencies": {
-    "hexo": "^4.2.1",
+    "hexo": "^7.2.0",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.0",
     "hexo-generator-index": "^0.1.0",
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-tag": "^0.1.0",
-    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-jade": "^0.1.0",
     "hexo-renderer-less": "^1.0.0",
     "hexo-renderer-marked": "^0.2.4",
