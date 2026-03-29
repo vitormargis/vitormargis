@@ -5,14 +5,14 @@
 }
 
 :root {
-  --color-bg: #0d0d0d;
+  --color-bg: #000000;
   --color-text: #ffffff;
   --color-accent: #f26522;
   --color-muted: #888888;
   --font-sans: 'Josefin Sans', sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
-  --nav-width: 48px;
-  --social-width: 48px;
+  --nav-width: 160px;
+  --social-width: 160px;
 }
 
 html, body {

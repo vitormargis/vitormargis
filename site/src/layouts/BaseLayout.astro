@@ -18,9 +18,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { href: 'https://github.com/vitormargis', label: 'GH' },
-  { href: 'https://linkedin.com/in/vitormargis', label: 'LI' },
-  { href: 'https://twitter.com/vitormargis', label: 'TW' },
+  { href: 'https://github.com/vitormargis', label: 'GITHUB' },
+  { href: 'https://linkedin.com/in/vitormargis', label: 'LINKEDIN' },
+  { href: 'https://twitter.com/vitormargis', label: 'TWITTER' },
   { href: 'https://adplist.org/mentors/vitor-margis', label: 'ADPList' },
 ];
 ---
@@ -115,15 +115,14 @@ const socialLinks = [
     grid-area: sidenav;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 2rem;
-    gap: 2rem;
+    padding-left: 1.25rem;
+    gap: 1.25rem;
     border-right: 1px solid #1a1a1a;
   }
 
   .nav-link {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     color: var(--color-muted);
@@ -146,14 +145,15 @@ const socialLinks = [
     grid-area: socials;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    gap: 2rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+    padding-right: 1.25rem;
+    gap: 1.25rem;
     border-left: 1px solid #1a1a1a;
   }
 
   .social-link {
-    writing-mode: vertical-rl;
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     color: var(--color-muted);
@@ -177,31 +177,20 @@ const socialLinks = [
 
     .sidenav {
       flex-direction: row;
+      align-items: center;
       padding: 0.75rem 1rem;
-      padding-top: 0.75rem;
       overflow-x: auto;
       border-right: none;
       border-top: 1px solid #1a1a1a;
     }
 
-    .nav-link {
-      writing-mode: horizontal-tb;
-      transform: none;
-      font-size: 0.6rem;
-    }
-
     .socials {
       flex-direction: row;
+      align-items: center;
       padding: 0.75rem 1rem;
-      padding-top: 0.75rem;
       justify-content: flex-end;
       border-left: none;
       border-top: 1px solid #1a1a1a;
-    }
-
-    .social-link {
-      writing-mode: horizontal-tb;
-      font-size: 0.6rem;
     }
   }
 </style>
