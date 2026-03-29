@@ -1,24 +1,103 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// TODO: confirm Twitter/X handle is still active and whether to add Bluesky before launch
+// TODO: confirm whether "available for work" copy should appear (was on old Hexo site)
+const contactLinks = [
+  { href: 'mailto:vitor@margis.com.br', label: 'EMAIL' },
+  { href: 'https://github.com/vitormargis', label: 'GITHUB' },
+  { href: 'https://linkedin.com/in/vitormargis', label: 'LINKEDIN' },
+  { href: 'https://youtube.com/@vitormargis', label: 'YOUTUBE' },
+  { href: 'https://instagram.com/vitormargis', label: 'INSTAGRAM' },
+  { href: 'https://adplist.org/mentors/vitor-margis', label: 'ADPLIST' },
+];
 ---
 
-<BaseLayout title="Hello">
-  <div class="page-stub">
-    <p class="label">HELLO</p>
-  </div>
+<BaseLayout title="Hello" description="Get in touch with Vitor Margis">
+  <section class="hello">
+    <div class="hello-inner">
+      <h1 class="heading">SAY <span class="accent">HELLO</span></h1>
+      <p class="copy">
+        I'm always open to interesting conversations, collaborations, and mentoring.
+        Drop me a line.
+      </p>
+      <ul class="links" role="list">
+        {contactLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class="link"
+              target={href.startsWith('mailto') ? undefined : '_blank'}
+              rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  .page-stub {
+  .hello {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 56px);
+    padding: 2rem;
   }
 
-  .label {
-    font-size: 0.75rem;
-    letter-spacing: 0.3em;
+  .hello-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    color: var(--color-text);
+  }
+
+  .accent {
+    color: var(--color-accent);
+  }
+
+  .copy {
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    letter-spacing: 0.08em;
     color: var(--color-muted);
+    line-height: 1.8;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    margin-top: 0.5rem;
+  }
+
+  .link {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--color-muted);
+    transition: color 0.2s;
+  }
+
+  .link:hover {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 640px) {
+    .hello {
+      align-items: flex-start;
+      padding-top: 2.5rem;
+    }
   }
 </style>
