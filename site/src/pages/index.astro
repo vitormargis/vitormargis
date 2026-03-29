@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Vitor Margis" description="Software Engineer & Engineering Manager based in Amsterdam">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="photo-wrap">
+        <img
+          src="/vitor.jpg"
+          alt="Vitor Margis"
+          class="photo"
+          width="180"
+          height="180"
+        />
+      </div>
+
+      <div class="hero-text">
+        <h1 class="headline">
+          HI, I'M <span class="accent">VITOR MARGIS</span>
+        </h1>
+        <p class="role">
+          SOFTWARE ENGINEER &amp; ENGINEERING MANAGER at <span class="accent">ANGI</span>
+          {' '}/<br class="role-break" />
+          MENTORING at <span class="accent">ADPList</span>
+        </p>
+        <p class="tagline">SHARING &amp; BUILDING FOR THE WEB</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 56px);
+    padding: 2rem;
+  }
+
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  /* Circular photo */
+  .photo-wrap {
+    flex-shrink: 0;
+  }
+
+  .photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Text block */
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .headline {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    color: var(--color-text);
+  }
+
+  .accent {
+    color: var(--color-accent);
+  }
+
+  .role {
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    letter-spacing: 0.12em;
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+
+  .role-break {
+    display: none;
+  }
+
+  .tagline {
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    letter-spacing: 0.2em;
+    color: #555555;
+    font-variant: small-caps;
+    margin-top: 0.25rem;
+  }
+
+  /* Mobile layout: stack vertically */
+  @media (max-width: 640px) {
+    .hero {
+      align-items: flex-start;
+      padding-top: 2.5rem;
+    }
+
+    .hero-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .role-break {
+      display: inline;
+    }
+  }
+</style>

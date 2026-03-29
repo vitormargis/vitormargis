@@ -1,0 +1,204 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Vitor Margis', description = 'Software Engineer & Engineering Manager' } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/about', label: 'ABOUT' },
+  { href: '/projects', label: 'PROJECTS' },
+  { href: '/articles', label: 'ARTICLES' },
+  { href: '/gear', label: 'GEAR' },
+  { href: '/hello', label: 'HELLO' },
+];
+
+const socialLinks = [
+  { href: 'https://github.com/vitormargis', label: 'GH' },
+  { href: 'https://linkedin.com/in/vitormargis', label: 'LI' },
+  { href: 'https://twitter.com/vitormargis', label: 'TW' },
+  { href: 'https://adplist.org/mentors/vitor-margis', label: 'ADPList' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title === 'Vitor Margis' ? title : `${title} — Vitor Margis`}</title>
+  </head>
+  <body>
+    <div class="shell">
+      <!-- Top bar -->
+      <header class="topbar">
+        <a href="/" class="monogram" aria-label="Home">VM/Z</a>
+        <span class="wordmark">VITORMARGIS</span>
+      </header>
+
+      <!-- Left vertical nav -->
+      <nav class="sidenav" aria-label="Main navigation">
+        {navLinks.map(({ href, label }) => (
+          <a
+            href={href}
+            class:list={['nav-link', { active: currentPath.startsWith(href) }]}
+            aria-current={currentPath.startsWith(href) ? 'page' : undefined}
+          >
+            <span class="nav-label">{label}</span>
+          </a>
+        ))}
+      </nav>
+
+      <!-- Main content -->
+      <main class="content">
+        <slot />
+      </main>
+
+      <!-- Right vertical social links -->
+      <aside class="socials" aria-label="Social links">
+        {socialLinks.map(({ href, label }) => (
+          <a href={href} class="social-link" target="_blank" rel="noopener noreferrer">
+            <span class="social-label">{label}</span>
+          </a>
+        ))}
+      </aside>
+    </div>
+  </body>
+</html>
+
+<style>
+  .shell {
+    display: grid;
+    grid-template-columns: var(--nav-width) 1fr var(--social-width);
+    grid-template-rows: 56px 1fr;
+    grid-template-areas:
+      "topbar topbar topbar"
+      "sidenav content socials";
+    min-height: 100vh;
+  }
+
+  /* Top bar */
+  .topbar {
+    grid-area: topbar;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .monogram {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+  }
+
+  .wordmark {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--color-muted);
+  }
+
+  /* Left nav */
+  .sidenav {
+    grid-area: sidenav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+    border-right: 1px solid #1a1a1a;
+  }
+
+  .nav-link {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--color-muted);
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-text);
+  }
+
+  /* Main content */
+  .content {
+    grid-area: content;
+    overflow: hidden;
+  }
+
+  /* Right social links */
+  .socials {
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+    border-left: 1px solid #1a1a1a;
+  }
+
+  .social-link {
+    writing-mode: vertical-rl;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--color-muted);
+    transition: color 0.2s;
+  }
+
+  .social-link:hover {
+    color: var(--color-accent);
+  }
+
+  /* Mobile: collapse side columns */
+  @media (max-width: 640px) {
+    .shell {
+      grid-template-columns: 0 1fr 0;
+      grid-template-rows: 56px 1fr 48px;
+      grid-template-areas:
+        "topbar topbar topbar"
+        "content content content"
+        "sidenav sidenav socials";
+    }
+
+    .sidenav {
+      flex-direction: row;
+      padding: 0.75rem 1rem;
+      padding-top: 0.75rem;
+      overflow-x: auto;
+      border-right: none;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .nav-link {
+      writing-mode: horizontal-tb;
+      transform: none;
+      font-size: 0.6rem;
+    }
+
+    .socials {
+      flex-direction: row;
+      padding: 0.75rem 1rem;
+      padding-top: 0.75rem;
+      justify-content: flex-end;
+      border-left: none;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .social-link {
+      writing-mode: horizontal-tb;
+      font-size: 0.6rem;
+    }
+  }
+</style>
