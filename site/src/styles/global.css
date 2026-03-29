@@ -5,9 +5,10 @@
 }
 
 :root {
-  --color-bg: #000000;
+  --color-bg: #151515;
+  --color-bg-sidebar: #101010;
   --color-text: #ffffff;
-  --color-accent: #f26522;
+  --color-accent: #F5AA00;
   --color-muted: #888888;
   --font-sans: 'Josefin Sans', sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
