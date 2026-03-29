@@ -9,6 +9,7 @@
   --color-text: #ffffff;
   --color-accent: #f26522;
   --color-muted: #888888;
+  --font-sans: 'Josefin Sans', sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
   --nav-width: 48px;
   --social-width: 48px;
@@ -18,7 +19,7 @@ html, body {
   height: 100%;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
 }
 
 a {
