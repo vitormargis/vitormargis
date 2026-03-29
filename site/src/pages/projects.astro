@@ -1,24 +1,109 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    monogram: 'R',
+    name: 'Repikue',
+    description: 'Daily budget app — track spending and stay on top of your finances.',
+    url: 'https://repikue.com',
+    urlLabel: 'repikue.com',
+  },
+];
 ---
 
 <BaseLayout title="Projects">
-  <div class="page-stub">
-    <p class="label">PROJECTS</p>
+  <div class="projects-page">
+    <ul class="project-list">
+      {projects.map((p) => (
+        <li class="project-card">
+          <div class="project-icon" aria-hidden="true">{p.monogram}</div>
+          <div class="project-info">
+            <a href={p.url} class="project-name" target="_blank" rel="noopener noreferrer">{p.name}</a>
+            <p class="project-desc">{p.description}</p>
+            <a href={p.url} class="project-url" target="_blank" rel="noopener noreferrer">{p.urlLabel}</a>
+          </div>
+        </li>
+      ))}
+    </ul>
   </div>
 </BaseLayout>
 
 <style>
-  .page-stub {
+  .projects-page {
+    padding: 3rem 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .project-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 56px);
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
   }
 
-  .label {
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 0.25rem;
+  }
+
+  .project-name {
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    text-transform: uppercase;
+  }
+
+  .project-name:hover {
+    color: var(--color-accent);
+  }
+
+  .project-desc {
     font-size: 0.75rem;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.05em;
     color: var(--color-muted);
+    line-height: 1.6;
+  }
+
+  .project-url {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .project-url:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 640px) {
+    .projects-page {
+      padding: 2rem 1.25rem;
+    }
   }
 </style>
