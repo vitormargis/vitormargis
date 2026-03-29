@@ -43,7 +43,7 @@ const socialLinks = [
       <!-- Top bar -->
       <header class="topbar">
         <a href="/" class="monogram" aria-label="Home">VM/Z</a>
-        <span class="wordmark">VITORMARGIS</span>
+        <span class="wordmark"><span class="wordmark-first">VITOR</span><span class="wordmark-last">MARGIS</span></span>
       </header>
 
       <!-- Left vertical nav -->
@@ -107,7 +107,14 @@ const socialLinks = [
   .wordmark {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
-    color: var(--color-muted);
+  }
+
+  .wordmark-first {
+    color: var(--color-text);
+  }
+
+  .wordmark-last {
+    color: var(--color-accent);
   }
 
   /* Left nav */
