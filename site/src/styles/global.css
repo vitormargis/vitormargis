@@ -10,6 +10,7 @@
   --color-accent: #f26522;
   --color-muted: #888888;
   --font-sans: 'Josefin Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
   --nav-width: 48px;
   --social-width: 48px;
@@ -19,7 +20,13 @@ html, body {
   height: 100%;
   background-color: var(--color-bg);
   color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 a {
