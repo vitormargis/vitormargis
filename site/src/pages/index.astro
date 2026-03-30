@@ -7,16 +7,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="hero-inner">
       <div class="photo-wrap">
         <div class="carousel-slides">
-          <img src="/hero1.png" class="carousel-slide active" alt="Vitor Margis" width="180" height="180" />
-          <img src="/hero2.png" class="carousel-slide" alt="Vitor Margis" width="180" height="180" />
-          <img src="/hero3.png" class="carousel-slide" alt="Vitor Margis" width="180" height="180" />
-          <img src="/hero4.png" class="carousel-slide" alt="Vitor Margis" width="180" height="180" />
-        </div>
-        <div class="carousel-dots">
-          <button class="carousel-dot active" aria-label="Slide 1"></button>
-          <button class="carousel-dot" aria-label="Slide 2"></button>
-          <button class="carousel-dot" aria-label="Slide 3"></button>
-          <button class="carousel-dot" aria-label="Slide 4"></button>
+          <img src="/hero1.png" class="carousel-slide active" alt="Vitor Margis" width="250" height="250" />
+          <img src="/hero2.png" class="carousel-slide" alt="Vitor Margis" width="250" height="250" />
+          <img src="/hero3.png" class="carousel-slide" alt="Vitor Margis" width="250" height="250" />
+          <img src="/hero4.png" class="carousel-slide" alt="Vitor Margis" width="250" height="250" />
         </div>
       </div>
 
@@ -47,8 +41,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .hero-inner {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    max-width: 800px;
+    gap: 3.5rem;
+    max-width: 900px;
     width: 100%;
   }
 
@@ -59,18 +53,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .carousel-slides {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
+    border: 11px solid #151515;
+    box-shadow: 0px 0px 0px 5px #fff;
   }
 
   .carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     object-position: center top;
     opacity: 0;
@@ -81,28 +77,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     opacity: 1;
   }
 
-  .carousel-dots {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .carousel-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-muted);
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: background 0.2s;
-  }
-
-  .carousel-dot.active {
-    background: var(--color-accent);
-  }
-
   /* Text block */
   .hero-text {
     display: flex;
@@ -111,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .headline {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     letter-spacing: 0.08em;
     line-height: 1.1;
     color: var(--color-text);
@@ -122,7 +96,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role {
-    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-size: clamp(0.85rem, 2vw, 1.2rem);
     letter-spacing: 0.12em;
     color: var(--color-muted);
     line-height: 1.6;
@@ -133,7 +107,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .tagline {
-    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     letter-spacing: 0.2em;
     color: #555555;
     font-variant: small-caps;
@@ -154,13 +128,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .carousel-slides {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
     }
 
     .carousel-slide {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
     }
 
     .role-break {
@@ -171,17 +145,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <script>
   const slides = document.querySelectorAll<HTMLElement>('.carousel-slide');
-  const dots = document.querySelectorAll<HTMLElement>('.carousel-dot');
   let current = 0;
 
   function go(n: number) {
     slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
-    dots[current].classList.add('active');
   }
 
-  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
   setInterval(() => go(current + 1), 4000);
 </script>
