@@ -6,13 +6,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="hero">
     <div class="hero-inner">
       <div class="photo-wrap">
-        <img
-          src="/vitor.jpg"
-          alt="Vitor Margis"
-          class="photo"
-          width="180"
-          height="180"
-        />
+        <div class="carousel-slides">
+          <img src="/hero1.png" class="carousel-slide active" alt="Vitor Margis" width="180" height="180" />
+          <img src="/hero2.png" class="carousel-slide" alt="Vitor Margis" width="180" height="180" />
+          <img src="/hero3.png" class="carousel-slide" alt="Vitor Margis" width="180" height="180" />
+          <img src="/hero4.png" class="carousel-slide" alt="Vitor Margis" width="180" height="180" />
+        </div>
+        <div class="carousel-dots">
+          <button class="carousel-dot active" aria-label="Slide 1"></button>
+          <button class="carousel-dot" aria-label="Slide 2"></button>
+          <button class="carousel-dot" aria-label="Slide 3"></button>
+          <button class="carousel-dot" aria-label="Slide 4"></button>
+        </div>
       </div>
 
       <div class="hero-text">
@@ -47,18 +52,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     width: 100%;
   }
 
-  /* Circular photo */
+  /* Carousel */
   .photo-wrap {
     flex-shrink: 0;
   }
 
-  .photo {
+  .carousel-slides {
+    position: relative;
     width: 180px;
     height: 180px;
     border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     object-position: center top;
-    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-muted);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+  }
+
+  .carousel-dot.active {
+    background: var(--color-accent);
   }
 
   /* Text block */
@@ -111,7 +153,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       gap: 1.5rem;
     }
 
-    .photo {
+    .carousel-slides {
+      width: 120px;
+      height: 120px;
+    }
+
+    .carousel-slide {
       width: 120px;
       height: 120px;
     }
@@ -121,3 +168,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   }
 </style>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.carousel-slide');
+  const dots = document.querySelectorAll<HTMLElement>('.carousel-dot');
+  let current = 0;
+
+  function go(n: number) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
+  setInterval(() => go(current + 1), 4000);
+</script>

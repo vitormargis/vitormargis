@@ -42,7 +42,9 @@ const socialLinks = [
     <div class="shell">
       <!-- Top bar -->
       <header class="topbar">
-        <a href="/" class="monogram" aria-label="Home">VM/Z</a>
+        <a href="/" class="logo-link" aria-label="Home">
+          <img src="/logo.png" alt="Vitor Margis" class="logo" />
+        </a>
         <span class="wordmark"><span class="wordmark-first">VITOR</span><span class="wordmark-last">MARGIS</span></span>
       </header>
 
@@ -82,7 +84,7 @@ const socialLinks = [
     grid-template-columns: var(--nav-width) 1fr var(--social-width);
     grid-template-rows: 56px 1fr;
     grid-template-areas:
-      "topbar topbar topbar"
+      "sidenav topbar socials"
       "sidenav content socials";
     min-height: 100vh;
   }
@@ -94,14 +96,17 @@ const socialLinks = [
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    border-bottom: 1px solid #1a1a1a;
   }
 
-  .monogram {
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
+  .logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 32px;
+    width: auto;
+    display: block;
   }
 
   .wordmark {
@@ -127,7 +132,21 @@ const socialLinks = [
     padding-left: 1.25rem;
     gap: 1.25rem;
     background-color: var(--color-bg-sidebar);
-    border-right: 1px solid #1a1a1a;
+    position: relative;
+    overflow: visible;
+  }
+
+  .sidenav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 80px;
+    height: 100%;
+    background-color: var(--color-bg-sidebar);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .nav-link {
@@ -159,7 +178,21 @@ const socialLinks = [
     padding-right: 1.25rem;
     gap: 1.25rem;
     background-color: var(--color-bg-sidebar);
-    border-left: 1px solid #1a1a1a;
+    position: relative;
+    overflow: visible;
+  }
+
+  .socials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 80px;
+    height: 100%;
+    background-color: var(--color-bg-sidebar);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .social-link {
@@ -189,8 +222,12 @@ const socialLinks = [
       align-items: center;
       padding: 0.75rem 1rem;
       overflow-x: auto;
-      border-right: none;
+      overflow-y: hidden;
       border-top: 1px solid #1a1a1a;
+    }
+
+    .sidenav::after {
+      display: none;
     }
 
     .socials {
@@ -198,8 +235,12 @@ const socialLinks = [
       align-items: center;
       padding: 0.75rem 1rem;
       justify-content: flex-end;
-      border-left: none;
+      overflow: hidden;
       border-top: 1px solid #1a1a1a;
+    }
+
+    .socials::before {
+      display: none;
     }
   }
 </style>
