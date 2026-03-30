@@ -6,13 +6,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="hero">
     <div class="hero-inner">
       <div class="photo-wrap">
-        <img
-          src="/vitor.jpg"
-          alt="Vitor Margis"
-          class="photo"
-          width="180"
-          height="180"
-        />
+        <div class="carousel-slides">
+          <img src="/hero1.png" class="carousel-slide active" alt="Vitor Margis" width="250" height="250" />
+          <img src="/hero2.png" class="carousel-slide" alt="Vitor Margis" width="250" height="250" />
+          <img src="/hero3.png" class="carousel-slide" alt="Vitor Margis" width="250" height="250" />
+          <img src="/hero4.png" class="carousel-slide" alt="Vitor Margis" width="250" height="250" />
+        </div>
       </div>
 
       <div class="hero-text">
@@ -42,23 +41,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .hero-inner {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    max-width: 800px;
+    gap: 3.5rem;
+    max-width: 900px;
     width: 100%;
   }
 
-  /* Circular photo */
+  /* Carousel */
   .photo-wrap {
     flex-shrink: 0;
   }
 
-  .photo {
-    width: 180px;
-    height: 180px;
+  .carousel-slides {
+    position: relative;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+    overflow: hidden;
+    border: 11px solid #151515;
+    box-shadow: 0px 0px 0px 5px #fff;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     object-position: center top;
-    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
   }
 
   /* Text block */
@@ -69,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .headline {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     letter-spacing: 0.08em;
     line-height: 1.1;
     color: var(--color-text);
@@ -80,7 +96,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role {
-    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-size: clamp(0.85rem, 2vw, 1.2rem);
     letter-spacing: 0.12em;
     color: var(--color-muted);
     line-height: 1.6;
@@ -91,7 +107,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .tagline {
-    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     letter-spacing: 0.2em;
     color: #555555;
     font-variant: small-caps;
@@ -111,9 +127,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       gap: 1.5rem;
     }
 
-    .photo {
-      width: 120px;
-      height: 120px;
+    .carousel-slides {
+      width: 160px;
+      height: 160px;
+    }
+
+    .carousel-slide {
+      width: 160px;
+      height: 160px;
     }
 
     .role-break {
@@ -121,3 +142,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   }
 </style>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.carousel-slide');
+  let current = 0;
+
+  function go(n: number) {
+    slides[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(() => go(current + 1), 4000);
+</script>

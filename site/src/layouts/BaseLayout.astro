@@ -40,14 +40,19 @@ const socialLinks = [
   </head>
   <body>
     <div class="shell">
-      <!-- Top bar -->
+      <!-- Top bar — visible only on mobile -->
       <header class="topbar">
-        <a href="/" class="monogram" aria-label="Home">VM/Z</a>
+        <a href="/" class="logo-link" aria-label="Home">
+          <img src="/logo.png" alt="Vitor Margis" class="logo" />
+        </a>
         <span class="wordmark"><span class="wordmark-first">VITOR</span><span class="wordmark-last">MARGIS</span></span>
       </header>
 
       <!-- Left vertical nav -->
       <nav class="sidenav" aria-label="Main navigation">
+        <a href="/" class="logo-link" aria-label="Home">
+          <img src="/logo.png" alt="Vitor Margis" class="logo" />
+        </a>
         {navLinks.map(({ href, label }) => (
           <a
             href={href}
@@ -66,6 +71,7 @@ const socialLinks = [
 
       <!-- Right vertical social links -->
       <aside class="socials" aria-label="Social links">
+        <span class="wordmark"><span class="wordmark-first">VITOR</span><span class="wordmark-last">MARGIS</span></span>
         {socialLinks.map(({ href, label }) => (
           <a href={href} class="social-link" target="_blank" rel="noopener noreferrer">
             <span class="social-label">{label}</span>
@@ -82,26 +88,29 @@ const socialLinks = [
     grid-template-columns: var(--nav-width) 1fr var(--social-width);
     grid-template-rows: 56px 1fr;
     grid-template-areas:
-      "topbar topbar topbar"
+      "sidenav topbar socials"
       "sidenav content socials";
     min-height: 100vh;
   }
 
-  /* Top bar */
+  /* Top bar — desktop: hidden (logo/wordmark live in sidebars) */
   .topbar {
     grid-area: topbar;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    border-bottom: 1px solid #1a1a1a;
   }
 
-  .monogram {
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
+  .logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 32px;
+    width: auto;
+    display: block;
   }
 
   .wordmark {
@@ -123,11 +132,29 @@ const socialLinks = [
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-left: 1.25rem;
     gap: 1.25rem;
     background-color: var(--color-bg-sidebar);
-    border-right: 1px solid #1a1a1a;
+    position: relative;
+    overflow: visible;
+  }
+
+  .sidenav .logo-link {
+    margin-bottom: 0.5rem;
+  }
+
+  .sidenav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 80px;
+    height: 100%;
+    background-color: var(--color-bg-sidebar);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .nav-link {
@@ -154,12 +181,31 @@ const socialLinks = [
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
     padding-right: 1.25rem;
     gap: 1.25rem;
     background-color: var(--color-bg-sidebar);
-    border-left: 1px solid #1a1a1a;
+    position: relative;
+    overflow: visible;
+  }
+
+  .socials .wordmark {
+    margin-bottom: auto;
+  }
+
+  .socials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 80px;
+    height: 100%;
+    background-color: var(--color-bg-sidebar);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .social-link {
@@ -184,13 +230,26 @@ const socialLinks = [
         "sidenav sidenav socials";
     }
 
+    .topbar {
+      display: flex;
+    }
+
+    .sidenav .logo-link,
+    .socials .wordmark {
+      display: none;
+    }
+
     .sidenav {
       flex-direction: row;
       align-items: center;
       padding: 0.75rem 1rem;
       overflow-x: auto;
-      border-right: none;
+      overflow-y: hidden;
       border-top: 1px solid #1a1a1a;
+    }
+
+    .sidenav::after {
+      display: none;
     }
 
     .socials {
@@ -198,8 +257,12 @@ const socialLinks = [
       align-items: center;
       padding: 0.75rem 1rem;
       justify-content: flex-end;
-      border-left: none;
+      overflow: hidden;
       border-top: 1px solid #1a1a1a;
+    }
+
+    .socials::before {
+      display: none;
     }
   }
 </style>
