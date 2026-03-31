@@ -11,46 +11,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           HI, I'M <span class="accent">VITOR MARGIS</span>
         </h1>
         <p class="role">
-          SOFTWARE ENGINEER &amp; ENGINEERING MANAGER at <span class="accent">ANGI</span>
-          {' '}/<br class="role-break" />
-          MENTORING at <span class="accent">ADPList</span>
+          ENGINEER &amp; MANAGER AT <span class="accent">ANGI</span>
+          <br class="role-break" />
+          MENTORING AT <span class="accent">ADPList</span>
         </p>
       </header>
 
       <!-- Bio with floating company logo decorations -->
       <div class="bio-wrap">
-        <!-- Left-side decoration: Travix -->
-        <div class="logo-float logo-float--left" aria-hidden="true">
-          <span class="logo-badge">TRAVIX</span>
-        </div>
 
         <!-- Bio copy -->
         <div class="bio">
-          <p>
-            I started out with a degree in Graphic Design, spending my early career
-            at small design studios where I learned to obsess over craft and user
-            experience.
-          </p>
-          <p>
-            In 2014 I made the full pivot to web development — writing code turned out
-            to be the fastest way to ship the ideas I cared about.
-          </p>
-          <p>
-            Since then I've grown through a series of product companies:{' '}
-            <a href="https://www.vizir.com.br" target="_blank" rel="noopener noreferrer">Vizir Software Studio</a>,{' '}
-            <a href="https://www.travix.com" target="_blank" rel="noopener noreferrer">Travix International</a>,{' '}
-            <a href="https://www.sesame.hr" target="_blank" rel="noopener noreferrer">Sesame</a>,{' '}
-            and now{' '}
-            <a href="https://www.instapro.nl" target="_blank" rel="noopener noreferrer">Instapro Group (Angi)</a>{' '}
-            — where I lead engineering teams and still write code every day.
-          </p>
+            <p>Born in Rio, raised in Porto Alegre. Lived in São Paulo for 8 years, and currently based in Amsterdam with my wife, daughter and 2 dogs.</p>
+            <p>Back in 2010 I got a degree on Graphic Design and worked on a couple of small design studios, mainly as do-all web guy. Until 2014, when I decided to pivot my career and focus only web development. </p>
+            <p>
+              Since then I had the opportunity to work, as part of <a href="https://www.vizir.com.br" target="_blank" rel="noopener noreferrer">Vizir Software Studio</a>,{' '} team, on several start-up projects as well as big projects for big companies like: Sprinklr, Grupo Abril, Natura and Edenred, just to name some. 
+              <span class="logo-badge vizir"><img src="/about-vizir.png" class="" alt="Vitor Margis" /></span>
+            </p>
+            <p>
+              <span class="logo-badge travix"><img src="/about-travix.png" class="" alt="Vitor Margis" /></span>
+              I than moved to the Netherlands to work at <a href="https://www.travix.com" target="_blank" rel="noopener noreferrer">Travix International</a>,{' '}, a global leading plane ticket sellers, which, with its 5 brands (CheapTickets, BudgetAir, Vayama, FlugLaden and VliegWinkel), is present in 39 countries. There I worked as front-end Engineer and subsequently as a Manager, and was responsible for building the new front-end platform from the ground up with a incredible global team, using some of the coolest technologies out there.
+            </p>
+            <p>
+              I then joined <a href="https://www.sesame.hr" target="_blank" rel="noopener noreferrer">Sesame Care</a>,{' '}, working as an Engineering Manager helping bring affordable health care to people.
+              <span class="logo-badge sesame"><img src="/about-sesame.png" class="" alt="Vitor Margis" /></span>
+            </p>
+            <p>
+              <span class="logo-badge instapro"><img src="/about-angi.png" class="" alt="Vitor Margis" /></span>
+              Currently I hold a position at <a href="https://www.instapro.nl" target="_blank" rel="noopener noreferrer">Instapro Group (Angi)</a>{' '}, working as an Engineering Manager.
+            </p>
+            <p>Anyway, if you got all the way down here, the odds are you want to get in touch, for a job, for hiring or just to talk. Feel free to reach out on any of my social medias or just drop by a message here            </p>
+
         </div>
 
-        <!-- Right-side decorations: Sesame + Instapro -->
-        <div class="logo-float logo-float--right" aria-hidden="true">
-          <span class="logo-badge">SESAME</span>
-          <span class="logo-badge logo-badge--accent">INSTAPRO</span>
-        </div>
       </div>
     </div>
   </section>
@@ -78,12 +71,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    font-weight: 100;
   }
 
   .headline {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    letter-spacing: 0.08em;
-    line-height: 1.1;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    letter-spacing: 0;
     color: var(--color-text);
   }
 
@@ -92,10 +85,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role {
-    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
-    letter-spacing: 0.12em;
-    color: var(--color-muted);
-    line-height: 1.6;
+    font-size: clamp(0.85rem, 2vw, 2.6rem);
+    letter-spacing: 0em;
+    color: var(--color-text);
+    line-height: 1.4;
   }
 
   .role-break {
@@ -115,58 +108,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    font-size: clamp(0.75rem, 1.5vw, 1.1rem);
     line-height: 1.8;
-    color: var(--color-muted);
+    font-weight: 100;
+    color: var(--color-text);
   }
 
   .bio p {
     /* inherit */
+    position: relative;
   }
 
   .bio a {
     color: var(--color-text);
-    border-bottom: 1px solid #333;
-    transition: color 0.2s, border-color 0.2s;
+    border-left: 4px solid #33333300;
+    border-right: 4px solid #33333300;
+    margin: 0 -4px;
+    transition: all 0.2s, border-color 0.2s;
+    color: var(--color-accent);
   }
 
   .bio a:hover {
-    color: var(--color-accent);
-    border-color: var(--color-accent);
-  }
-
-  /* Floating logo decorations */
-  .logo-float {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-top: 0.5rem;
-  }
-
-  .logo-float--left {
-    align-items: flex-end;
-  }
-
-  .logo-float--right {
-    align-items: flex-start;
+    border-color: var(var(--color-accent));
+    color: #000;
+    background: var(--color-accent)
   }
 
   .logo-badge {
-    writing-mode: vertical-rl;
     font-size: 0.55rem;
     letter-spacing: 0.25em;
     color: #2a2a2a;
-    border: 1px solid #1e1e1e;
     padding: 0.75rem 0.3rem;
     border-radius: 2px;
     user-select: none;
+    position: absolute;
+    mix-blend-mode: lighten;
   }
 
-  .logo-badge--accent {
-    color: #3a2010;
-    border-color: #2a1808;
+  .logo-badge.vizir {
+    top: -20px;
+    right: -140px;
   }
+
+  .logo-badge.travix {
+    left: -220px;
+    top: 20px;
+  }
+
+  .logo-badge.sesame {
+    right: -180px;
+    top: -30px;
+  }
+
+  .logo-badge.instapro {
+    left: -195px;
+    top: -40px;
+  }
+
+    /* Mobile */
+  @media (max-width: 1525px) {
+    .about-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      max-width: 675px;
+      width: 100%;
+    }
+  }
+
 
   /* Mobile */
   @media (max-width: 640px) {

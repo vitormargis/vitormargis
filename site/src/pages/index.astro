@@ -18,11 +18,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h1 class="headline">
           HI, I'M <span class="accent">VITOR MARGIS</span>
         </h1>
-        <p class="role">
+        <h2 class="role">
           SOFTWARE ENGINEER &amp; ENGINEERING MANAGER at <span class="accent">ANGI</span>
           {' '}/<br class="role-break" />
           MENTORING at <span class="accent">ADPList</span>
-        </p>
+        </h2>
         <p class="tagline">SHARING &amp; BUILDING FOR THE WEB</p>
       </div>
     </div>
@@ -42,8 +42,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: flex;
     align-items: center;
     gap: 3.5rem;
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
+    margin-top: -100px;
   }
 
   /* Carousel */
@@ -85,9 +86,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .headline {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    letter-spacing: 0.08em;
-    line-height: 1.1;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    letter-spacing: 0;
+    line-height: 1.4;
     color: var(--color-text);
   }
 
@@ -96,10 +97,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role {
-    font-size: clamp(0.85rem, 2vw, 1.2rem);
-    letter-spacing: 0.12em;
-    color: var(--color-muted);
-    line-height: 1.6;
+    font-size: clamp(0.85rem, 2vw, 2.6rem);
+    letter-spacing: 0em;
+    color: var(--color-text);
+    line-height: 1.4;
   }
 
   .role-break {
@@ -107,11 +108,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .tagline {
-    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-size: clamp(0.75rem, 1.5vw, 1.2rem);
     letter-spacing: 0.2em;
+    font-weight: 200;
     color: #555555;
     font-variant: small-caps;
-    margin-top: 0.25rem;
+    margin-top: 1rem;
   }
 
   /* Mobile layout: stack vertically */

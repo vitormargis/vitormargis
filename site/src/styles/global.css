@@ -1,26 +1,29 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --color-bg: #151515;
+  --color-bg: #171717;
   --color-bg-sidebar: #101010;
   --color-text: #ffffff;
-  --color-accent: #F5AA00;
+  --color-accent: #f5aa00;
   --color-muted: #888888;
-  --font-sans: 'Josefin Sans', sans-serif;
-  --font-body: 'Poppins', sans-serif;
-  --font-mono: 'Courier New', Courier, monospace;
+  --font-sans: "Josefin Sans", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
   --nav-width: 160px;
   --social-width: 160px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background-color: var(--color-bg);
-  background-image: url('/bg.png');
+  background-image: url("/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +32,12 @@ html, body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-sans);
   font-weight: 100;
   text-transform: uppercase;
