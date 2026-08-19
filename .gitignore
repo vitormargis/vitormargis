@@ -3,3 +3,4 @@ public
 node_modules
 theme/vitormargis-theme
 db.json
+.DS_Store
