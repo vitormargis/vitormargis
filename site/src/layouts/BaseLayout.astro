@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { socialLinks, sameAs } from '../data/social';
 
 interface Props {
   title?: string;
@@ -17,25 +18,6 @@ const navLinks = [
   { href: '/about', label: 'ABOUT' },
   { href: '/projects', label: 'PROJECTS' },
   { href: '/hello', label: 'HELLO' },
-];
-
-const socialLinks = [
-  { href: 'https://github.com/vitormargis', label: 'GITHUB' },
-  { href: 'https://linkedin.com/in/vitormargis', label: 'LINKEDIN' },
-  { href: 'https://twitter.com/vitormargis', label: 'TWITTER' },
-  { href: 'https://adplist.org/mentors/vitor-margis', label: 'ADPList' },
-];
-
-// Social profiles for the Person JSON-LD `sameAs` — inlined from the links
-// already present across the site (nav socials + hello page contacts).
-// MAR-33 will later DRY these into a single source of truth.
-const sameAs = [
-  'https://github.com/vitormargis',
-  'https://linkedin.com/in/vitormargis',
-  'https://twitter.com/vitormargis',
-  'https://youtube.com/@vitormargis',
-  'https://instagram.com/vitormargis',
-  'https://adplist.org/mentors/vitor-margis',
 ];
 
 const personSchema = {
