@@ -9,6 +9,10 @@ interface Props {
 const { title = 'Vitor Margis', description = 'Software Engineer & Engineering Manager' } = Astro.props;
 const currentPath = Astro.url.pathname;
 
+const pageTitle = title === 'Vitor Margis' ? title : `${title} — Vitor Margis`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL('/og.png', Astro.site);
+
 const navLinks = [
   { href: '/about', label: 'ABOUT' },
   { href: '/projects', label: 'PROJECTS' },
@@ -21,6 +25,28 @@ const socialLinks = [
   { href: 'https://twitter.com/vitormargis', label: 'TWITTER' },
   { href: 'https://adplist.org/mentors/vitor-margis', label: 'ADPList' },
 ];
+
+// Social profiles for the Person JSON-LD `sameAs` — inlined from the links
+// already present across the site (nav socials + hello page contacts).
+// MAR-33 will later DRY these into a single source of truth.
+const sameAs = [
+  'https://github.com/vitormargis',
+  'https://linkedin.com/in/vitormargis',
+  'https://twitter.com/vitormargis',
+  'https://youtube.com/@vitormargis',
+  'https://instagram.com/vitormargis',
+  'https://adplist.org/mentors/vitor-margis',
+];
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Vitor Margis',
+  jobTitle: 'Engineering Manager @ Angi',
+  url: new URL('/', Astro.site).href,
+  image: new URL('/hero1.png', Astro.site).href,
+  sameAs,
+};
 ---
 
 <!doctype html>
@@ -30,11 +56,29 @@ const socialLinks = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content="Vitor Margis" />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:creator" content="@vitormargis" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" />
-    <title>{title === 'Vitor Margis' ? title : `${title} — Vitor Margis`}</title>
+    <title>{pageTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   </head>
   <body>
     <div class="shell">
