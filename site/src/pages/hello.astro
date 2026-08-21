@@ -1,16 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { socialLinks, email } from '../data/social';
 
-// TODO: confirm Twitter/X handle is still active and whether to add Bluesky before launch
-// TODO: confirm whether "available for work" copy should appear (was on old Hexo site)
-const contactLinks = [
-  { href: 'mailto:vitor@margis.com.br', label: 'EMAIL' },
-  { href: 'https://github.com/vitormargis', label: 'GITHUB' },
-  { href: 'https://linkedin.com/in/vitormargis', label: 'LINKEDIN' },
-  { href: 'https://youtube.com/@vitormargis', label: 'YOUTUBE' },
-  { href: 'https://instagram.com/vitormargis', label: 'INSTAGRAM' },
-  { href: 'https://adplist.org/mentors/vitor-margis', label: 'ADPLIST' },
-];
+const contactLinks = [email, ...socialLinks];
 ---
 
 <BaseLayout title="Hello" description="Get in touch with Vitor Margis">
